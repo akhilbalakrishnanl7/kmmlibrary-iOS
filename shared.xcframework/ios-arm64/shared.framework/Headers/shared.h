@@ -8,7 +8,7 @@
 
 @class SharedDatabaseDriverFactory, SharedRocketLaunch, SharedPatch, SharedLinksCompanion, SharedLinks, SharedPatchCompanion, SharedRocketLaunchCompanion, SharedAppDatabaseQueries, SharedAppDatabaseCompanion, SharedKotlinUnit, SharedRuntimeTransacterTransaction, SharedKotlinThrowable, SharedRuntimeBaseTransacterImpl, SharedRuntimeTransacterImpl, SharedLaunch, SharedRuntimeQuery<__covariant RowType>, SharedKotlinArray<T>, SharedKotlinException, SharedKotlinRuntimeException, SharedKotlinIllegalStateException, SharedRuntimeAfterVersion, SharedRuntimeExecutableQuery<__covariant RowType>, SharedKotlinx_serialization_coreSerializersModule, SharedKotlinx_serialization_coreSerialKind, SharedKotlinNothing, SharedKotlinByteArray, SharedKotlinByteIterator;
 
-@protocol SharedPlatform, SharedKotlinx_serialization_coreKSerializer, SharedRuntimeTransactionWithoutReturn, SharedRuntimeTransactionWithReturn, SharedRuntimeTransacterBase, SharedRuntimeTransacter, SharedAppDatabase, SharedRuntimeSqlDriver, SharedRuntimeSqlSchema, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedRuntimeTransactionCallbacks, SharedRuntimeQueryListener, SharedRuntimeQueryResult, SharedRuntimeSqlPreparedStatement, SharedRuntimeSqlCursor, SharedRuntimeCloseable, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
+@protocol SharedKotlinx_serialization_coreKSerializer, SharedRuntimeTransactionWithoutReturn, SharedRuntimeTransactionWithReturn, SharedRuntimeTransacterBase, SharedRuntimeTransacter, SharedAppDatabase, SharedRuntimeSqlDriver, SharedRuntimeSqlSchema, SharedKotlinx_serialization_coreEncoder, SharedKotlinx_serialization_coreSerialDescriptor, SharedKotlinx_serialization_coreSerializationStrategy, SharedKotlinx_serialization_coreDecoder, SharedKotlinx_serialization_coreDeserializationStrategy, SharedRuntimeTransactionCallbacks, SharedRuntimeQueryListener, SharedRuntimeQueryResult, SharedRuntimeSqlPreparedStatement, SharedRuntimeSqlCursor, SharedRuntimeCloseable, SharedKotlinIterator, SharedKotlinx_serialization_coreCompositeEncoder, SharedKotlinAnnotation, SharedKotlinx_serialization_coreCompositeDecoder, SharedKotlinx_serialization_coreSerializersModuleCollector, SharedKotlinKClass, SharedKotlinKDeclarationContainer, SharedKotlinKAnnotatedElement, SharedKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -142,28 +142,6 @@ __attribute__((swift_name("KotlinBoolean")))
 @interface SharedBoolean : SharedNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Greeting")))
-@interface SharedGreeting : SharedBase
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (NSString *)greet __attribute__((swift_name("greet()")));
-@end
-
-__attribute__((swift_name("Platform")))
-@protocol SharedPlatform
-@required
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("IOSPlatform")))
-@interface SharedIOSPlatform : SharedBase <SharedPlatform>
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -375,12 +353,6 @@ __attribute__((swift_name("Launch")))
 @property (readonly) NSString *missionName __attribute__((swift_name("missionName")));
 @property (readonly) NSString * _Nullable patchUrlLarge __attribute__((swift_name("patchUrlLarge")));
 @property (readonly) NSString * _Nullable patchUrlSmall __attribute__((swift_name("patchUrlSmall")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Platform_iosKt")))
-@interface SharedPlatform_iosKt : SharedBase
-+ (id<SharedPlatform>)getPlatform __attribute__((swift_name("getPlatform()")));
 @end
 
 __attribute__((swift_name("KotlinThrowable")))
